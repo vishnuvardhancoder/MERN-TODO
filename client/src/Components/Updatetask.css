@@ -1,0 +1,110 @@
+.popup{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup .popup-content{
+    width: 400px;
+    height: 200px;
+    background-color: #23272F;
+    padding: 20px;
+    border: 4px double #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 4px rgb(0,0,0);
+}
+
+
+.input {
+    background-color: #212121;
+    color: #fff;
+    /* max-width: 190px; */
+    width: 100%;
+    height: 40px;
+    padding: 14px;
+    /* text-align: center; */
+    border: 2px solid white;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+  .updatebutton {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.4em 1.2em;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: mediumspringgreen;
+    font-size: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 2rem;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .updatebutton p {
+    z-index: 1;
+  }
+  
+  .updatebutton:hover {
+    color: #212121;
+  }
+  
+  .updatebutton:active {
+    border-color: teal;
+  }
+  
+  .updatebutton::after, .updatebutton::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: mediumspringgreen;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .updatebutton::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .updatebutton::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .updatebutton:hover:before {
+    transform: translateX(-1em);
+  }
+  
+  .updatebutton:hover:after {
+    transform: translateX(1em);
+  }
+  
+  .updatebutton:active:before,
+  .updatebutton:active:after {
+    background: teal;
+  }
