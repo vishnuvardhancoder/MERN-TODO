@@ -8,7 +8,7 @@ function AddTask(props) {
     if(task.trim() === ''){
         return
     }else{
-        axios.post("mern-todo-server-ruddy.vercel.app",{
+        axios.post("https://mern-todo-server-ruddy.vercel.app/",{
             todo : task,
             isComplete : false
         }).then(res =>{

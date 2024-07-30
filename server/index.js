@@ -6,7 +6,7 @@ require('./models/db')
 app.use(express.json())
 app.use(cors(
     {
-        origin : ["mern-todo-client-two.vercel.app"],
+        origin : ["https://mern-todo-client-two.vercel.app"],
         methods: ["POST","GET","DELETE","PUT"],
         credentials: true
     }

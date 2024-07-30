@@ -8,7 +8,7 @@ function Updatetask(props) {
     if(task.trim()===''|| props.task.todo === task){
         props.removepopup()
     }else{
-        axios.put(`mern-todo-server-ruddy.vercel.app${props.task._id}`,{
+        axios.put(`https://mern-todo-server-ruddy.vercel.app/${props.task._id}`,{
             _id : props.task._id,
             todo : task,
             isComplete : props.task.isComplete
