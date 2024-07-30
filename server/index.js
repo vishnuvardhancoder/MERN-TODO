@@ -4,7 +4,13 @@ const router = require('./routes/routes')
 const app = express()
 require('./models/db')
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin : ["mern-todo-client-two.vercel.app"],
+        methods: ["POST","GET","DELETE","PUT"],
+        credentials: true
+    }
+))
 app.use('/', router)
 
 app.get('/',(req,res)=>{
