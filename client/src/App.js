@@ -10,7 +10,7 @@ function App() {
   const [tasktoupdate,setTasktoupdate] = useState({})
   const [showpopup,setshowpopup] = useState(false)
   useEffect(()=>{
-    axios.get('mern-todo-server-ruddy.vercel.app/').then(res => {
+    axios.get('mern-todo-server-ruddy.vercel.app').then(res => {
       setTodolist(res.data)
     }).catch(err => {console.log(err)})
   },[])
