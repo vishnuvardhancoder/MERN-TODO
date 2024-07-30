@@ -8,7 +8,7 @@ import axios from "axios"
 function Todolist(props) {
   const todolist = props.todolist.map((task,index)=>{
     const taskcomplete = (task)=>{
-      axios.put(`http://localhost:8000/${task._id}`,{
+      axios.put(`mern-todo-server-ruddy.vercel.app/${task._id}`,{
         _id : task._id,
         todo : task.todo,
         isComplete : !task.isComplete
@@ -18,7 +18,7 @@ function Todolist(props) {
     }
 
     const removeTask = (id)=>{
-      axios.delete(`http://localhost:8000/${task._id}`).then(res=> props.removeTask(res.data)).catch(err=>console.log(err))
+      axios.delete(`mern-todo-server-ruddy.vercel.app/${task._id}`).then(res=> props.removeTask(res.data)).catch(err=>console.log(err))
     }
     return <li key={index}>
         <div style={{display:'flex', alignItems:'center',justifyContent:'center'}}>
